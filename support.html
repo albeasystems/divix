@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Divix support center. Frequently asked questions and direct contact."/>
+<title>Support — Divix</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="icon">💱</div>
+    <span>Divix</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-hide">Home</a>
+    <a href="privacy.html" class="nav-hide">Privacy</a>
+    <a href="support.html" class="active">Support</a>
+    <a href="#" class="btn-nav">Download</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>Support Center</h1>
+  <p>Find answers to the most common questions or get in touch with us directly.</p>
+</div>
+
+<div class="content">
+
+  <!-- FAQ -->
+  <span class="section-label">Frequently asked questions</span>
+  <div style="margin-top: 14px;">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How many currencies does Divix support?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Divix supports more than <strong>150 world currencies</strong>, including all major reserve currencies (USD, EUR, GBP, JPY, CHF, CNY) and many emerging-market and exotic ones. The full list is available inside the app under the currency picker.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        Where do the exchange rates come from?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Divix uses public financial data providers that aggregate mid-market exchange rates from international currency markets. Rates refresh continuously throughout the day so you always see the latest available data.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        Why is the rate in the app different from the one at my bank?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Divix shows <strong>mid-market rates</strong>, which is the midpoint between the buy and sell prices on global markets. Banks, exchange offices and money-transfer services add their own spread, commission or fee, so the final rate you receive will usually be slightly less favorable. Use Divix to know the "real" rate, then compare it against your provider's offer.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        Does Divix work without an internet connection?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Yes. The last fetched rates are cached on your device, so you can keep converting even when you have no signal — perfect for trips abroad. Once you reconnect, rates refresh automatically.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I add a currency to my favorites?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        From the currency list, tap the star icon next to any currency to pin it to your favorites. Your favorites appear at the top of the converter and update in real time as you type an amount.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How do I change the base currency?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Tap the currency code on the main converter screen and pick a new one from the list. The amount you enter will be expressed in that currency and converted to all of your favorites at the same time.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        How can I remove ads?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Open Settings inside the app and choose <strong>Remove ads</strong>. It's a one-time purchase of $2.99 (or local equivalent) — no subscription, no renewals. Once unlocked, ads stay removed on all devices signed in with the same Apple ID.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        I changed my iPhone — how do I restore my "Remove ads" purchase?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Open Settings inside Divix on the new device and tap <strong>Restore purchases</strong>. Make sure you are signed in with the same Apple ID you used for the original purchase.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        Is Divix available for Android?
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        Divix is currently available only for iPhone (iOS 16 or higher). We are considering an Android version in the future.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        I think a rate is wrong or out of date.
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-a">
+        If a rate looks incorrect, please contact us with the currency pair, the value you see in the app and the value you expected. We'll investigate with our data provider and push a fix in the next update if needed.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card" style="text-align:center; margin-top: 36px;">
+    <p style="font-size:22px; font-weight:800; margin-bottom:10px;">Need more help?</p>
+    <p style="font-size:15px; color: var(--text-muted); margin-bottom:28px; line-height:1.65; max-width:420px; margin-left:auto; margin-right:auto;">
+      If you couldn't find an answer to your question, drop us a line and we'll reply within 48 hours.
+    </p>
+    <a href="mailto:albeasystems@gmail.com?subject=Divix%20Support" class="btn-contact">
+      ✉ Send a message
+    </a>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <div class="icon">💱</div>
+        <span>Divix</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+        <a href="#">App Store</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Divix. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggle(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>
