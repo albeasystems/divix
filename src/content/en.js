@@ -28,6 +28,8 @@ export default {
     },
     breadcrumbs: { home: 'Divix', guides: 'Guides' },
     updated: 'Updated',
+    by: 'By',
+    related: 'More guides',
     readMore: 'Read the guide',
     backToGuides: 'All guides',
     ctaGuide: 'Check any price in seconds with Divix',

@@ -36,6 +36,8 @@ const publisher = {
   name: PUBLISHER,
   email: CONTACT_EMAIL,
   url: `${SITE_ORIGIN}${SITE_BASE}`,
+  logo: { '@type': 'ImageObject', url: abs('icon-512.png'), width: 512, height: 512 },
+  sameAs: [APP_URL],
 }
 
 function appNode(lang) {
@@ -49,6 +51,7 @@ function appNode(lang) {
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'iOS 17.6 or later',
     url: APP_URL,
+    mainEntityOfPage: url('home', lang),
     downloadUrl: APP_URL,
     installUrl: APP_URL,
     image: abs('icon-512.png'),

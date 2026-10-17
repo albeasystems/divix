@@ -4,7 +4,7 @@ import { GuideList } from './Home'
 import { usePage } from '../i18n'
 import { href } from '../routes'
 import { fmtDate } from '../lib'
-import { SITE_MODIFIED } from '../config'
+import { PUBLISHER, SITE_MODIFIED } from '../config'
 
 export function GuidesIndex() {
   const { t, lang } = usePage()
@@ -36,7 +36,7 @@ export function GuideArticle() {
         />
         <h1 className="page-h1">{g.h1}</h1>
         <p className="meta">
-          {t.ui.updated} <time dateTime={SITE_MODIFIED}>{fmtDate(SITE_MODIFIED, t.locale)}</time>
+          {t.ui.by} {PUBLISHER}. {t.ui.updated} <time dateTime={SITE_MODIFIED}>{fmtDate(SITE_MODIFIED, t.locale)}</time>
         </p>
         <p className="lead">{g.lead}</p>
         {g.sections.map((s) => (
@@ -55,6 +55,19 @@ export function GuideArticle() {
           <h2>FAQ</h2>
           <Faq items={g.faq} name="guide-faq" />
         </section>
+        <nav className="related" aria-label={t.ui.related}>
+          <h2>{t.ui.related}</h2>
+          <ul className="gl">
+            {t.guides.ids.filter((id) => id !== routeId).map((id) => (
+              <li key={id}>
+                <a href={href(id, lang)}>
+                  <span className="gl-title">{t.guide[id].h1}</span>
+                  <span className="gl-sum">{t.guide[id].summary}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <aside className="guide-cta">
           <p>{t.ui.ctaGuide}</p>
           <StoreButton>{t.ui.getApp}</StoreButton>
