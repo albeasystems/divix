@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { AppleLogo, ArrowUpRight, CaretRight, List, Translate } from '@phosphor-icons/react'
+import { AppleLogo, ArrowUpRight, CaretRight, List, Globe } from '@phosphor-icons/react'
 import { APP_URL, CONTACT_EMAIL, PUBLISHER, YEAR } from '../config'
 import { usePage } from '../i18n'
 import { href, LANGS, LANG_LABEL, hreflang } from '../routes'
@@ -15,7 +15,7 @@ export function StoreButton({ children, className = '', id, size = 'lg' }) {
 }
 
 /** Every language but English has its own in-app captures under public/shots/<lang>/; shots missing there fall back to the English ones. */
-const LOCALIZED_SHOTS = ['convert', 'markets', 'picker', 'chart', 'bitcoin', 'cryptolist']
+const LOCALIZED_SHOTS = ['convert', 'markets', 'picker', 'chart', 'bitcoin', 'cryptolist', 'favorites']
 
 /** Real simulator screenshot inside a thin device frame. */
 export function Phone({ src, alt, priority = false, className = '', width = 600, height = 1304 }) {
@@ -88,7 +88,7 @@ export function Nav() {
           <a href={href('support', lang)} className="hide-sm">{t.ui.nav.support}</a>
           <details className="lang-menu hide-sm">
             <summary className="sign-lang" aria-label={t.ui.langMenu}>
-              <Translate size={16} aria-hidden="true" />
+              <Globe size={16} weight="bold" aria-hidden="true" />
               {LANG_LABEL[lang]}
             </summary>
             <div className="lang-drop">

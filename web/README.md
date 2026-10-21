@@ -24,7 +24,7 @@ npm run preview    # serves web/dist at http://localhost:4173/divix/
 
 ## Updating the screenshots
 
-Each language has its own captures in `public/shots/<lang>/` (convert, markets, picker, chart, bitcoin, cryptolist), converted from `appstore/<locale>/clean/` to 600 px WebP. `favorites`, `swap` and the Home journey GIF are English only. Re-capture on an iPhone 17 simulator (`xcrun simctl status_bar booted override --time 9:41`), convert to 600 px wide WebP, replace files in `public/shots/`, and rebuild the GIF.
+Each language has its own captures in `public/shots/<lang>/` (convert, markets, picker, chart, bitcoin, cryptolist, favorites, journey), converted from `appstore/<locale>/clean/` to 600 px WebP. Each non-English language also has `favorites.webp` and `journey.webp` (the Home animation, built from that language's own captures); `swap` and the English Home journey (GIF/WebP) come from the original recording. Re-capture on an iPhone 17 simulator (`xcrun simctl status_bar booted override --time 9:41`), convert to 600 px wide WebP, replace files in `public/shots/`, and rebuild the GIF.
 
 ## Publishing
 

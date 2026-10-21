@@ -38,7 +38,7 @@ async function write(rel, body) {
 function page({ routeId, lang, withBoard, extraHead = '' }) {
   const { html, head } = render({ routeId, lang, board: boardData[lang] })
   const mdLink = routeId !== 'root' && artifacts.hasMarkdown(routeId) ? `<link rel="alternate" type="text/markdown" href="${routes.urlFor(routeId, lang)}index.md" />` : ''
-  const hero = routeId === 'home' ? `<link rel="preload" as="image" href="${base}divix-happy-journey.webp" type="image/webp" fetchpriority="high" />` : ''
+  const hero = routeId === 'home' ? `<link rel="preload" as="image" href="${base}${lang === 'en' ? 'divix-happy-journey.webp' : `shots/${lang}/journey.webp`}" type="image/webp" fetchpriority="high" />` : ''
   const data = withBoard ? `<script id="board-data" type="application/json">${JSON.stringify(boardData[lang]).replace(/</g, '\\u003c')}</script>` : ''
   return template
     .replace('<html lang="en">', `<html lang="${htmlLang(lang)}" dir="${dirOf(lang)}">`)
