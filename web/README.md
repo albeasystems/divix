@@ -1,18 +1,18 @@
 # Divix web
 
-Static, bilingual (EN/ES) site for the Divix iOS app. Stack: Vite + React 19 + Tailwind v4. Every page is prerendered to plain HTML at build time (so search engines and AI crawlers read the content without running JavaScript) and hydrated in the browser.
+Static, twelve-language site (EN, ES, FR, IT, DE, PT, AR, ZH, HI, JA, KO, VI) for the Divix iOS app, the same languages as the app. Stack: Vite + React 19 + Tailwind v4. Every page is prerendered to plain HTML at build time (so search engines and AI crawlers read the content without running JavaScript) and hydrated in the browser.
 
 ```bash
 cd web
 npm install
 npm run dev        # http://localhost:5173/divix/en/
-npm run build      # prerenders 17 pages into web/dist (needs internet: it fetches today's rates)
+npm run build      # prerenders 97 pages (8 pages x 12 languages, plus the root chooser and 404) into web/dist (needs internet: it fetches today's rates)
 npm run preview    # serves web/dist at http://localhost:4173/divix/
 ```
 
 ## Where things live
 
-- `src/content/en.js`, `src/content/es.js`: all copy (home, FAQ, three guides, privacy, terms, support). Edit both languages together. House rule: no em or en dashes.
+- `src/content/<lang>.js`: all copy per language (home, FAQ, three guides, privacy, terms, support). English and Spanish are the originals; the other ten are translations with the same keys, so change every file when a text changes. House rule: no em or en dashes.
 - `src/pages/`: Home, guides, legal, root language chooser. `src/components/`: header, footer, rate board, converter, FAQ.
 - `src/routes.js`: one entry per page and language (slugs are localised: `/es/guias/...`).
 - `src/seo.js`: title, canonical, hreflang, Open Graph, Twitter, JSON-LD (WebSite, Organization, MobileApplication, FAQPage, Article, BreadcrumbList).
@@ -24,7 +24,7 @@ npm run preview    # serves web/dist at http://localhost:4173/divix/
 
 ## Updating the screenshots
 
-Re-capture on an iPhone 17 simulator (`xcrun simctl status_bar booted override --time 9:41`), convert to 600 px wide WebP, replace files in `public/shots/`, and rebuild the GIF. The Spanish pages reuse the English-UI captures.
+Each language has its own captures in `public/shots/<lang>/` (convert, markets, picker, chart, bitcoin, cryptolist), converted from `appstore/<locale>/clean/` to 600 px WebP. `favorites`, `swap` and the Home journey GIF are English only. Re-capture on an iPhone 17 simulator (`xcrun simctl status_bar booted override --time 9:41`), convert to 600 px wide WebP, replace files in `public/shots/`, and rebuild the GIF.
 
 ## Publishing
 

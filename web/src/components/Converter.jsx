@@ -4,7 +4,7 @@ import { usePage } from '../i18n'
 import { convert } from '../rates'
 import { asset, currencyName, FLAG, fill, fmtDate, fmtMoney, fmtRate } from '../lib'
 
-const OPTIONS = ['EUR', 'USD', 'GBP', 'JPY', 'MXN', 'CAD', 'CHF', 'AUD', 'CNY', 'TRY', 'BRL', 'INR']
+const OPTIONS = ['EUR', 'USD', 'GBP', 'JPY', 'MXN', 'CAD', 'CHF', 'AUD', 'CNY', 'TRY', 'BRL', 'INR', 'KRW']
 
 function Select({ id, value, onChange, label, locale }) {
   return (
@@ -27,7 +27,7 @@ function Select({ id, value, onChange, label, locale }) {
 export default function Converter() {
   const { t, lang, board } = usePage()
   const c = t.home.calc.try
-  const initTo = lang === 'en' ? 'EUR' : 'USD'
+  const initTo = board.base === 'USD' ? 'EUR' : 'USD'
   const [amount, setAmount] = useState('250')
   const [from, setFrom] = useState(board.base)
   const [to, setTo] = useState(initTo)

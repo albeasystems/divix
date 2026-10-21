@@ -5,6 +5,7 @@ import '@fontsource-variable/hanken-grotesk/wght.css'
 import './styles.css'
 import App from './App'
 import { BOARD, fetchBoard } from './rates'
+import { loadContent } from './i18n'
 import { match } from './routes'
 
 const root = document.getElementById('root')
@@ -14,6 +15,7 @@ const lng = root.dataset.lang || lang
 const rid = root.dataset.route || route.id
 
 async function boot() {
+  await loadContent(lng)
   let board = data ? JSON.parse(data.textContent) : null
   if (!board && rid === 'home') board = await fetchBoard(BOARD[lng].base, BOARD[lng].symbols)
   const tree = (b) => (

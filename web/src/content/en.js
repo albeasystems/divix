@@ -14,8 +14,7 @@ export default {
     nav: { guides: 'Guides', faq: 'FAQ', support: 'Support' },
     sign: 'Currency exchange',
     menu: 'Menu',
-    langName: 'Español',
-    langLabel: 'Leer en español',
+    langMenu: 'Language',
     footer: {
       product: 'Divix',
       learn: 'Learn',
@@ -36,6 +35,7 @@ export default {
   },
 
   seo: {
+    imgAlt: 'Divix: currency converter with a built-in calculator for iPhone',
     home: {
       title: 'Divix: Currency Converter & Calculator for iPhone',
       description:
@@ -113,7 +113,7 @@ export default {
         { h: 'Works offline', p: 'The last rates are saved on your phone, so a weak signal does not stop you.' },
         { h: 'No account', p: 'Open the app and type. No email, no password.' },
         { h: 'No markup', p: 'Mid-market rates, the same number you would find searching online.' },
-        { h: 'Nine languages', p: 'English, Spanish, German, French, Italian, Portuguese, Arabic, Hindi and Chinese.' },
+        { h: 'Twelve languages', p: 'English, Spanish, French, Italian, German, Portuguese, Arabic, Chinese, Hindi, Japanese, Korean and Vietnamese.' },
       ],
     },
     pricing: {
