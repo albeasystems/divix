@@ -1,0 +1,151 @@
+/* Divix — 한국어 */
+
+"app_name" = "Divix: 환율 계산기";
+
+/* Common */
+"common_cancel" = "취소";
+"common_done" = "완료";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "환율 상태";
+"badge_no_data" = "데이터 없음";
+"badge_live" = "실시간";
+"badge_cached_hours" = "%d시간 전 업데이트";
+"badge_offline_date" = "오프라인 — %@ 데이터";
+
+/* Currency picker */
+"currency_picker_title" = "통화 선택";
+"currency_picker_search_placeholder" = "코드 또는 이름으로 검색";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "마지막 문자 삭제";
+
+/* Main conversion screen */
+"main_amount_label" = "금액";
+"main_result_label" = "결과";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "즐겨찾기에 추가";
+"main_favorited" = "즐겨찾기됨";
+"main_a11y_open_settings" = "설정 열기";
+"main_a11y_swap" = "통화 서로 바꾸기";
+"main_a11y_amount" = "환산할 금액";
+"main_a11y_result" = "환산 결과";
+"main_a11y_add_favorite" = "이 통화쌍을 즐겨찾기에 추가";
+"main_a11y_favorited" = "통화쌍이 즐겨찾기에 저장되었습니다";
+
+/* Settings */
+"settings_title" = "설정";
+"settings_section_general" = "일반";
+"settings_section_about" = "정보";
+"settings_section_legal" = "법적 고지";
+"settings_language" = "언어";
+"settings_language_footer" = "새 언어는 다음에 앱을 열 때 적용됩니다.";
+
+"language_system" = "시스템";
+"language_spanish" = "스페인어";
+"language_english" = "영어";
+"language_french" = "프랑스어";
+"language_italian" = "이탈리아어";
+"language_german" = "독일어";
+"language_portuguese" = "포르투갈어";
+"language_arabic" = "아랍어";
+"language_chinese_simplified" = "중국어(간체)";
+"language_hindi" = "힌디어";
+"language_japanese" = "일본어";
+"language_korean" = "한국어";
+"language_vietnamese" = "베트남어";
+
+"settings_share_app" = "앱 공유";
+"settings_share_message" = "Divix를 확인해 보세요 — 진짜 계산기와 오프라인 모드를 갖춘 환율 변환기입니다.";
+"settings_visit_website" = "웹사이트 방문";
+"settings_send_suggestion" = "의견 보내기";
+"settings_suggestion_subject" = "Divix — 의견";
+"settings_privacy_policy" = "개인정보 처리방침";
+"settings_terms_of_use" = "이용약관";
+"settings_version" = "버전";
+"settings_app_name_label" = "앱";
+"settings_premium_active" = "프리미엄 기능 활성화됨";
+
+/* Common (additional) */
+"common_ok" = "확인";
+
+/* Premium alerts */
+"premium_unlocked_title" = "프리미엄 잠금 해제됨";
+"premium_unlocked_message" = "광고가 제거되고, 무제한 다중 통화와 매시간 새로고침이 활성화되었습니다.";
+"premium_locked_title" = "프리미엄 비활성화됨";
+"premium_locked_message" = "무료 모드로 복원되었습니다.";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "더 관련성 높은 광고를 보여드리기 위해 이 권한을 사용합니다. 설정에서 언제든지 변경할 수 있습니다.";
+
+/* Onboarding */
+"onboarding_1_title" = "오늘 환율인지 항상 확인하세요";
+"onboarding_1_subtitle" = "환산할 때마다 데이터의 최신 정도(실시간, 캐시, 오프라인)를 분명하게 보여줍니다.";
+"onboarding_2_title" = "계산하면서 환산하세요";
+"onboarding_2_subtitle" = "+, −, ×, ÷ 가 있는 진짜 계산기가 같은 화면에 들어 있습니다. 앱을 오갈 필요가 없습니다.";
+"onboarding_3_title" = "즐겨 쓰는 통화쌍을 한 번에";
+"onboarding_3_subtitle" = "조합을 저장하고 환율을 바로 확인하세요.";
+"onboarding_next" = "다음";
+"onboarding_start" = "시작하기";
+
+/* Tabs */
+"tab_convert" = "환산";
+"tab_multi" = "다중";
+"tab_chart" = "차트";
+"tab_favorites" = "즐겨찾기";
+
+/* Multi-currency list */
+"multi_title" = "다중 통화 목록";
+"multi_amount_placeholder" = "금액";
+"multi_add_currency" = "통화 추가";
+
+/* Historical chart */
+"chart_title" = "기록";
+"chart_range" = "기간";
+"range_7d" = "7일";
+"range_30d" = "30일";
+"range_90d" = "90일";
+"range_1y" = "1년";
+"chart_no_data_title" = "표시할 데이터가 없습니다";
+"chart_no_data_subtitle" = "다른 기간이나 통화쌍을 선택해 보세요.";
+"chart_load_error" = "데이터를 불러오지 못했습니다. 연결 상태를 확인하세요.";
+"chart_current_rate" = "현재 환율";
+"chart_variation" = "변동";
+"chart_x_axis" = "날짜";
+"chart_y_axis" = "환율";
+
+/* Favorites */
+"favorites_title" = "즐겨찾기";
+"favorites_empty_title" = "아직 즐겨찾기가 없습니다";
+"favorites_empty_subtitle" = "메인 화면의 별 버튼으로 통화쌍을 추가하세요.";
+
+"range_2y" = "2년";
+"range_5y" = "5년";
+"badge_updated_at" = "%@ 업데이트";
+"chart_a11y_reverse" = "통화쌍 반전";
+"multi_empty_title" = "아직 통화가 없습니다";
+"multi_empty_subtitle" = "아래로 당겨 새로고침하여 환율을 불러오세요.";
+"section_fiat" = "법정화폐";
+"section_crypto" = "암호화폐";
+"chart_low" = "최저";
+"chart_high" = "최고";
+"chart_change" = "변동";
+"filter_all" = "전체";
+"list_title" = "시장";
+"common_copy" = "복사";
+"common_close" = "닫기";
+"settings_support" = "지원";
+"settings_rate_app" = "앱 평가하기";
+"iap_remove_ads" = "광고 제거";
+"iap_restore" = "구매 복원";
+"iap_one_time" = "1회 구매 · 영구 광고 제거";
+"iap_product_unavailable" = "상품을 사용할 수 없습니다. 나중에 다시 시도하세요.";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "개인정보 옵션";
+"ads_rewarded_watch" = "동영상 시청 — 1시간 광고 없음";
+"ads_rewarded_active_title" = "광고 없음 활성화됨";
+"ads_rewarded_active_ends %@" = "%@에 종료";
+"ads_rewarded_unavailable_title" = "시청 가능한 동영상이 없습니다";
+"ads_rewarded_unavailable_message" = "몇 초 후에 다시 시도하세요.";

@@ -1,0 +1,151 @@
+/* Divix — English */
+
+"app_name" = "Divix: Currency Exchange";
+
+/* Common */
+"common_cancel" = "Cancel";
+"common_done" = "Done";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "Exchange rate status";
+"badge_no_data" = "No data";
+"badge_live" = "Live";
+"badge_cached_hours" = "Updated %dh ago";
+"badge_offline_date" = "Offline — data from %@";
+
+/* Currency picker */
+"currency_picker_title" = "Choose currency";
+"currency_picker_search_placeholder" = "Search by code or name";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "Delete last character";
+
+/* Main conversion screen */
+"main_amount_label" = "Amount";
+"main_result_label" = "Result";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "Add to favorites";
+"main_favorited" = "Favorited";
+"main_a11y_open_settings" = "Open settings";
+"main_a11y_swap" = "Swap currencies";
+"main_a11y_amount" = "Amount to convert";
+"main_a11y_result" = "Conversion result";
+"main_a11y_add_favorite" = "Add this pair to favorites";
+"main_a11y_favorited" = "Pair saved to favorites";
+
+/* Settings */
+"settings_title" = "Settings";
+"settings_section_general" = "General";
+"settings_section_about" = "About";
+"settings_section_legal" = "Legal";
+"settings_language" = "Language";
+"settings_language_footer" = "The new language will take effect the next time you open the app.";
+
+"language_system" = "System";
+"language_spanish" = "Spanish";
+"language_english" = "English";
+"language_french" = "French";
+"language_italian" = "Italian";
+"language_german" = "German";
+"language_portuguese" = "Portuguese";
+"language_arabic" = "Arabic";
+"language_chinese_simplified" = "Chinese (Simplified)";
+"language_hindi" = "Hindi";
+"language_japanese" = "Japanese";
+"language_korean" = "Korean";
+"language_vietnamese" = "Vietnamese";
+
+"settings_share_app" = "Share app";
+"settings_share_message" = "Check out Divix — the currency converter with a real calculator and offline mode.";
+"settings_visit_website" = "Visit website";
+"settings_send_suggestion" = "Send a suggestion";
+"settings_suggestion_subject" = "Divix — Suggestion";
+"settings_privacy_policy" = "Privacy policy";
+"settings_terms_of_use" = "Terms of use";
+"settings_version" = "Version";
+"settings_app_name_label" = "App";
+"settings_premium_active" = "Premium features active";
+
+/* Common (additional) */
+"common_ok" = "OK";
+
+/* Premium alerts */
+"premium_unlocked_title" = "Premium unlocked";
+"premium_unlocked_message" = "Ads removed, unlimited multi-currency and hourly refresh enabled.";
+"premium_locked_title" = "Premium disabled";
+"premium_locked_message" = "Free mode restored.";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "We use this permission to show you more relevant ads. You can change it any time from Settings.";
+
+/* Onboarding */
+"onboarding_1_title" = "Always know if the rate is from today";
+"onboarding_1_subtitle" = "Every conversion clearly shows how fresh the data is — live, cached or offline.";
+"onboarding_2_title" = "Convert while you calculate";
+"onboarding_2_subtitle" = "A real calculator with +, −, ×, ÷ built into the same screen. No app-switching.";
+"onboarding_3_title" = "Your favorite pairs, one tap away";
+"onboarding_3_subtitle" = "Save combinations and check their rate instantly.";
+"onboarding_next" = "Next";
+"onboarding_start" = "Get started";
+
+/* Tabs */
+"tab_convert" = "Convert";
+"tab_multi" = "Multi";
+"tab_chart" = "Chart";
+"tab_favorites" = "Favorites";
+
+/* Multi-currency list */
+"multi_title" = "Multi-currency list";
+"multi_amount_placeholder" = "Amount";
+"multi_add_currency" = "Add currency";
+
+/* Historical chart */
+"chart_title" = "History";
+"chart_range" = "Range";
+"range_7d" = "7D";
+"range_30d" = "30D";
+"range_90d" = "90D";
+"range_1y" = "1Y";
+"chart_no_data_title" = "No data to show";
+"chart_no_data_subtitle" = "Try a different range or pair.";
+"chart_load_error" = "Couldn't load data. Check your connection.";
+"chart_current_rate" = "Current rate";
+"chart_variation" = "Change";
+"chart_x_axis" = "Date";
+"chart_y_axis" = "Rate";
+
+/* Favorites */
+"favorites_title" = "Favorites";
+"favorites_empty_title" = "No favorites yet";
+"favorites_empty_subtitle" = "Add pairs from the main screen with the star button.";
+
+"range_2y" = "2Y";
+"range_5y" = "5Y";
+"badge_updated_at" = "Updated %@";
+"chart_a11y_reverse" = "Reverse the currency pair";
+"multi_empty_title" = "No currencies yet";
+"multi_empty_subtitle" = "Pull to refresh to load exchange rates.";
+"section_fiat" = "Fiat";
+"section_crypto" = "Crypto";
+"chart_low" = "Low";
+"chart_high" = "High";
+"chart_change" = "Change";
+"filter_all" = "All";
+"list_title" = "Markets";
+"common_copy" = "Copy";
+"common_close" = "Close";
+"settings_support" = "Support";
+"settings_rate_app" = "Rate the app";
+"iap_remove_ads" = "Remove ads";
+"iap_restore" = "Restore purchases";
+"iap_one_time" = "One-time purchase · no ads forever";
+"iap_product_unavailable" = "Product unavailable. Try again later.";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "Privacy options";
+"ads_rewarded_watch" = "Watch a video — 1 hour ad-free";
+"ads_rewarded_active_title" = "Ad-free active";
+"ads_rewarded_active_ends %@" = "Ends %@";
+"ads_rewarded_unavailable_title" = "No video available";
+"ads_rewarded_unavailable_message" = "Try again in a few seconds.";

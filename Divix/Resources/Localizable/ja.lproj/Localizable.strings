@@ -1,0 +1,151 @@
+/* Divix — 日本語 */
+
+"app_name" = "Divix：為替レート換算";
+
+/* Common */
+"common_cancel" = "キャンセル";
+"common_done" = "完了";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "為替レートの状態";
+"badge_no_data" = "データなし";
+"badge_live" = "ライブ";
+"badge_cached_hours" = "%d時間前に更新";
+"badge_offline_date" = "オフライン — %@のデータ";
+
+/* Currency picker */
+"currency_picker_title" = "通貨を選択";
+"currency_picker_search_placeholder" = "コードまたは名前で検索";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "最後の文字を削除";
+
+/* Main conversion screen */
+"main_amount_label" = "金額";
+"main_result_label" = "結果";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "お気に入りに追加";
+"main_favorited" = "お気に入り済み";
+"main_a11y_open_settings" = "設定を開く";
+"main_a11y_swap" = "通貨を入れ替える";
+"main_a11y_amount" = "換算する金額";
+"main_a11y_result" = "換算結果";
+"main_a11y_add_favorite" = "このペアをお気に入りに追加";
+"main_a11y_favorited" = "ペアをお気に入りに保存しました";
+
+/* Settings */
+"settings_title" = "設定";
+"settings_section_general" = "一般";
+"settings_section_about" = "情報";
+"settings_section_legal" = "法的情報";
+"settings_language" = "言語";
+"settings_language_footer" = "新しい言語は、次回アプリを開いたときに反映されます。";
+
+"language_system" = "システム";
+"language_spanish" = "スペイン語";
+"language_english" = "英語";
+"language_french" = "フランス語";
+"language_italian" = "イタリア語";
+"language_german" = "ドイツ語";
+"language_portuguese" = "ポルトガル語";
+"language_arabic" = "アラビア語";
+"language_chinese_simplified" = "中国語（簡体字）";
+"language_hindi" = "ヒンディー語";
+"language_japanese" = "日本語";
+"language_korean" = "韓国語";
+"language_vietnamese" = "ベトナム語";
+
+"settings_share_app" = "アプリを共有";
+"settings_share_message" = "Divixを試してみて — 本格的な電卓とオフラインモードを備えた通貨換算アプリです。";
+"settings_visit_website" = "ウェブサイトを見る";
+"settings_send_suggestion" = "ご意見を送る";
+"settings_suggestion_subject" = "Divix — ご意見";
+"settings_privacy_policy" = "プライバシーポリシー";
+"settings_terms_of_use" = "利用規約";
+"settings_version" = "バージョン";
+"settings_app_name_label" = "アプリ";
+"settings_premium_active" = "プレミアム機能が有効です";
+
+/* Common (additional) */
+"common_ok" = "OK";
+
+/* Premium alerts */
+"premium_unlocked_title" = "プレミアムを解除しました";
+"premium_unlocked_message" = "広告が非表示になり、複数通貨の無制限表示と毎時更新が有効になりました。";
+"premium_locked_title" = "プレミアムが無効です";
+"premium_locked_message" = "無料モードに戻りました。";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "より関連性の高い広告を表示するために、この許可を使用します。設定からいつでも変更できます。";
+
+/* Onboarding */
+"onboarding_1_title" = "そのレートが今日のものか、すぐ分かる";
+"onboarding_1_subtitle" = "換算のたびに、データの鮮度（ライブ・キャッシュ・オフライン）をはっきり表示します。";
+"onboarding_2_title" = "計算しながら換算";
+"onboarding_2_subtitle" = "+、−、×、÷ を備えた本格的な電卓を同じ画面に搭載。アプリを切り替える必要はありません。";
+"onboarding_3_title" = "お気に入りのペアをワンタップで";
+"onboarding_3_subtitle" = "組み合わせを保存して、すぐにレートを確認できます。";
+"onboarding_next" = "次へ";
+"onboarding_start" = "はじめる";
+
+/* Tabs */
+"tab_convert" = "換算";
+"tab_multi" = "複数";
+"tab_chart" = "チャート";
+"tab_favorites" = "お気に入り";
+
+/* Multi-currency list */
+"multi_title" = "複数通貨リスト";
+"multi_amount_placeholder" = "金額";
+"multi_add_currency" = "通貨を追加";
+
+/* Historical chart */
+"chart_title" = "履歴";
+"chart_range" = "期間";
+"range_7d" = "7日";
+"range_30d" = "30日";
+"range_90d" = "90日";
+"range_1y" = "1年";
+"chart_no_data_title" = "表示するデータがありません";
+"chart_no_data_subtitle" = "別の期間またはペアをお試しください。";
+"chart_load_error" = "データを読み込めませんでした。接続を確認してください。";
+"chart_current_rate" = "現在のレート";
+"chart_variation" = "変動";
+"chart_x_axis" = "日付";
+"chart_y_axis" = "レート";
+
+/* Favorites */
+"favorites_title" = "お気に入り";
+"favorites_empty_title" = "お気に入りはまだありません";
+"favorites_empty_subtitle" = "メイン画面の星ボタンでペアを追加できます。";
+
+"range_2y" = "2年";
+"range_5y" = "5年";
+"badge_updated_at" = "%@に更新";
+"chart_a11y_reverse" = "通貨ペアを反転";
+"multi_empty_title" = "通貨はまだありません";
+"multi_empty_subtitle" = "下に引いて更新し、為替レートを読み込みます。";
+"section_fiat" = "法定通貨";
+"section_crypto" = "暗号資産";
+"chart_low" = "安値";
+"chart_high" = "高値";
+"chart_change" = "変動";
+"filter_all" = "すべて";
+"list_title" = "マーケット";
+"common_copy" = "コピー";
+"common_close" = "閉じる";
+"settings_support" = "サポート";
+"settings_rate_app" = "アプリを評価";
+"iap_remove_ads" = "広告を削除";
+"iap_restore" = "購入を復元";
+"iap_one_time" = "買い切り · 広告なしがずっと続きます";
+"iap_product_unavailable" = "商品を利用できません。後でもう一度お試しください。";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "プライバシーオプション";
+"ads_rewarded_watch" = "動画を見る — 1時間広告なし";
+"ads_rewarded_active_title" = "広告なし有効";
+"ads_rewarded_active_ends %@" = "%@に終了";
+"ads_rewarded_unavailable_title" = "利用できる動画がありません";
+"ads_rewarded_unavailable_message" = "数秒後にもう一度お試しください。";

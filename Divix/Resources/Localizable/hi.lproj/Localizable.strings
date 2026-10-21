@@ -1,0 +1,151 @@
+/* Divix — हिन्दी */
+
+"app_name" = "Divix: Currency Exchange";
+
+/* Common */
+"common_cancel" = "रद्द करें";
+"common_done" = "हो गया";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "विनिमय दर स्थिति";
+"badge_no_data" = "डेटा नहीं";
+"badge_live" = "लाइव";
+"badge_cached_hours" = "%d घंटे पहले अपडेट";
+"badge_offline_date" = "ऑफ़लाइन — %@ का डेटा";
+
+/* Currency picker */
+"currency_picker_title" = "मुद्रा चुनें";
+"currency_picker_search_placeholder" = "कोड या नाम से खोजें";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "अंतिम अक्षर हटाएँ";
+
+/* Main conversion screen */
+"main_amount_label" = "राशि";
+"main_result_label" = "परिणाम";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "पसंदीदा में जोड़ें";
+"main_favorited" = "पसंदीदा में";
+"main_a11y_open_settings" = "सेटिंग्स खोलें";
+"main_a11y_swap" = "मुद्राएँ बदलें";
+"main_a11y_amount" = "बदलने वाली राशि";
+"main_a11y_result" = "रूपांतरण परिणाम";
+"main_a11y_add_favorite" = "इस जोड़ी को पसंदीदा में जोड़ें";
+"main_a11y_favorited" = "जोड़ी पसंदीदा में सहेजी गई";
+
+/* Settings */
+"settings_title" = "सेटिंग्स";
+"settings_section_general" = "सामान्य";
+"settings_section_about" = "ऐप के बारे में";
+"settings_section_legal" = "कानूनी";
+"settings_language" = "भाषा";
+"settings_language_footer" = "नई भाषा अगली बार ऐप खोलने पर लागू होगी।";
+
+"language_system" = "सिस्टम";
+"language_spanish" = "स्पेनिश";
+"language_english" = "अंग्रेज़ी";
+"language_french" = "फ़्रेंच";
+"language_italian" = "इतालवी";
+"language_german" = "जर्मन";
+"language_portuguese" = "पुर्तगाली";
+"language_arabic" = "अरबी";
+"language_chinese_simplified" = "चीनी (सरलीकृत)";
+"language_hindi" = "हिन्दी";
+"language_japanese" = "जापानी";
+"language_korean" = "कोरियाई";
+"language_vietnamese" = "वियतनामी";
+
+"settings_share_app" = "ऐप शेयर करें";
+"settings_share_message" = "Divix आज़माएँ — असली कैलकुलेटर और ऑफ़लाइन मोड वाला मुद्रा परिवर्तक।";
+"settings_visit_website" = "वेबसाइट पर जाएँ";
+"settings_send_suggestion" = "सुझाव भेजें";
+"settings_suggestion_subject" = "Divix — सुझाव";
+"settings_privacy_policy" = "गोपनीयता नीति";
+"settings_terms_of_use" = "उपयोग की शर्तें";
+"settings_version" = "संस्करण";
+"settings_app_name_label" = "ऐप";
+"settings_premium_active" = "प्रीमियम सुविधाएँ सक्रिय";
+
+/* Common (additional) */
+"common_ok" = "ठीक है";
+
+/* Premium alerts */
+"premium_unlocked_title" = "प्रीमियम सक्रिय";
+"premium_unlocked_message" = "विज्ञापन हटाए गए, असीमित मल्टी-करेंसी और प्रति घंटा रिफ़्रेश सक्षम।";
+"premium_locked_title" = "प्रीमियम बंद";
+"premium_locked_message" = "मुफ़्त मोड बहाल।";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "हम अधिक प्रासंगिक विज्ञापन दिखाने के लिए इस अनुमति का उपयोग करते हैं। आप इसे कभी भी सेटिंग्स से बदल सकते हैं।";
+
+/* Onboarding */
+"onboarding_1_title" = "हमेशा जानें कि दर आज की है या नहीं";
+"onboarding_1_subtitle" = "हर रूपांतरण डेटा की ताज़गी स्पष्ट दिखाता है — लाइव, कैश या ऑफ़लाइन।";
+"onboarding_2_title" = "गणना करते हुए बदलें";
+"onboarding_2_subtitle" = "उसी स्क्रीन में +, −, ×, ÷ वाला असली कैलकुलेटर। ऐप बदलने की ज़रूरत नहीं।";
+"onboarding_3_title" = "पसंदीदा जोड़ी एक टैप दूर";
+"onboarding_3_subtitle" = "कॉम्बिनेशन सहेजें और दर तुरंत देखें।";
+"onboarding_next" = "आगे";
+"onboarding_start" = "शुरू करें";
+
+/* Tabs */
+"tab_convert" = "बदलें";
+"tab_multi" = "मल्टी";
+"tab_chart" = "चार्ट";
+"tab_favorites" = "पसंदीदा";
+
+/* Multi-currency list */
+"multi_title" = "मल्टी-करेंसी सूची";
+"multi_amount_placeholder" = "राशि";
+"multi_add_currency" = "मुद्रा जोड़ें";
+
+/* Historical chart */
+"chart_title" = "इतिहास";
+"chart_range" = "रेंज";
+"range_7d" = "7द";
+"range_30d" = "30द";
+"range_90d" = "90द";
+"range_1y" = "1व";
+"chart_no_data_title" = "दिखाने के लिए कोई डेटा नहीं";
+"chart_no_data_subtitle" = "अलग रेंज या जोड़ी आज़माएँ।";
+"chart_load_error" = "डेटा लोड नहीं हो सका। कनेक्शन जाँचें।";
+"chart_current_rate" = "वर्तमान दर";
+"chart_variation" = "परिवर्तन";
+"chart_x_axis" = "तारीख़";
+"chart_y_axis" = "दर";
+
+/* Favorites */
+"favorites_title" = "पसंदीदा";
+"favorites_empty_title" = "अभी कोई पसंदीदा नहीं";
+"favorites_empty_subtitle" = "मुख्य स्क्रीन पर तारा बटन से जोड़ी जोड़ें।";
+
+"range_2y" = "2व";
+"range_5y" = "5व";
+"badge_updated_at" = "%@ को अपडेट किया गया";
+"chart_a11y_reverse" = "मुद्रा जोड़ी उलटें";
+"multi_empty_title" = "अभी तक कोई मुद्रा नहीं";
+"multi_empty_subtitle" = "विनिमय दरें लोड करने के लिए रिफ़्रेश करें।";
+"section_fiat" = "मुद्राएं";
+"section_crypto" = "क्रिप्टो";
+"chart_low" = "न्यूनतम";
+"chart_high" = "अधिकतम";
+"chart_change" = "परिवर्तन";
+"filter_all" = "सभी";
+"list_title" = "बाज़ार";
+"common_copy" = "कॉपी करें";
+"common_close" = "बंद करें";
+"settings_support" = "सहायता";
+"settings_rate_app" = "ऐप को रेट करें";
+"iap_remove_ads" = "विज्ञापन हटाएं";
+"iap_restore" = "खरीदारी पुनर्स्थापित करें";
+"iap_one_time" = "एकमुश्त खरीदारी · हमेशा के लिए विज्ञापन-मुक्त";
+"iap_product_unavailable" = "उत्पाद अनुपलब्ध है। बाद में पुनः प्रयास करें।";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "गोपनीयता विकल्प";
+"ads_rewarded_watch" = "वीडियो देखें — 1 घंटा विज्ञापन-मुक्त";
+"ads_rewarded_active_title" = "विज्ञापन-मुक्त सक्रिय";
+"ads_rewarded_active_ends %@" = "समाप्त %@";
+"ads_rewarded_unavailable_title" = "कोई वीडियो उपलब्ध नहीं";
+"ads_rewarded_unavailable_message" = "कुछ सेकंड बाद फिर कोशिश करें।";

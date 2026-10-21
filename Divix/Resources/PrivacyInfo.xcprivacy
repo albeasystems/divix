@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Privacy Manifest required by App Store (enforced since May 2024).
+	  Declared APIs, data collection categories, and whether data is linked to identity.
+	-->
+
+	<!-- APIs that require declared reasons -->
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<!-- UserDefaults — used for local preferences (language, premium flag,
+		     cached exchange rates, favourites). Reason: 1C8F = access info from
+		     same app; CA92 = access preferences created by this app. -->
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>CA92.1</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- Data collected. Values mirror the PrivacyInfo.xcprivacy files bundled
+	     inside the mediation stack's own xcframeworks (verified, not assumed:
+	     Google Mobile Ads 12.9.0, UMP 3.1.0, FBAudienceNetwork 6.21.1,
+	     IronSource 8.13.0 + adapters, UnityAds 4.17.0 — all ship one, and Apple
+	     aggregates them into the final privacy report automatically).
+	     Re-check them after every pod upgrade:
+	       find Pods -name PrivacyInfo.xcprivacy
+	     These must also match the answers given in App Store Connect. -->
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<!-- Advertising data (IDFA + ad interactions). The SDK declares this
+		     as linked to identity and used for tracking. When ATT is denied,
+		     Audience Network still serves non-personalised ads (see
+		     AdsManager.initialize). -->
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeAdvertisingData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<!-- Device identifier used for ad attribution. -->
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeDeviceID</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+			</array>
+		</dict>
+		<!-- Crash / diagnostic data reported by the SDK. -->
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeCrashData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeOtherDiagnosticData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<!-- Added by the mediation stack (Google Mobile Ads / UMP / ironSource
+		     Ad Quality). Linked/tracking/purpose values copied verbatim from the
+		     Google Mobile Ads 12.9.0 bundled manifest. -->
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeCoarseLocation</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+				<string>NSPrivacyCollectedDataTypePurposeDeveloperAdvertising</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypePerformanceData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeDeveloperAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeProductInteraction</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+				<string>NSPrivacyCollectedDataTypePurposeDeveloperAdvertising</string>
+				<string>NSPrivacyCollectedDataTypePurposeThirdPartyAdvertising</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- App tracks users across apps/websites via the mediated ad networks
+	     when ATT consent is granted. -->
+	<key>NSPrivacyTracking</key>
+	<true/>
+
+	<!-- Must be NON-EMPTY whenever NSPrivacyTracking is true: an empty array
+	     here is rejected at upload with ITMS-91064 ("Invalid tracking
+	     information"), despite the error text implying the opposite.
+
+	     These are exactly the endpoints the FBAudienceNetwork xcframework
+	     declares in its own bundled manifest (re-verified against the pod at
+	     6.21.1: it is the ONLY SDK in the stack that declares any tracking
+	     domain — Google, UMP, ironSource and Unity declare none) — restating them is accurate and
+	     functionally a no-op, since iOS already blocks them when ATT is
+	     denied. Do NOT broaden this to "facebook.com": that would make iOS
+	     block every facebook.com subdomain without tracking consent,
+	     including the ad-serving endpoints, breaking the non-personalised
+	     ads that must keep working. Re-check against the SDK's manifest on
+	     every upgrade. -->
+	<key>NSPrivacyTrackingDomains</key>
+	<array>
+		<string>ep1.facebook.com</string>
+		<string>ep6.facebook.com</string>
+	</array>
+</dict>
+</plist>

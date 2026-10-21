@@ -1,0 +1,151 @@
+/* Divix — العربية */
+
+"app_name" = "Divix: Currency Exchange";
+
+/* Common */
+"common_cancel" = "إلغاء";
+"common_done" = "تم";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "حالة سعر الصرف";
+"badge_no_data" = "لا توجد بيانات";
+"badge_live" = "مباشر";
+"badge_cached_hours" = "تم التحديث قبل %d ساعة";
+"badge_offline_date" = "غير متصل — بيانات من %@";
+
+/* Currency picker */
+"currency_picker_title" = "اختر العملة";
+"currency_picker_search_placeholder" = "ابحث بالرمز أو الاسم";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "حذف الحرف الأخير";
+
+/* Main conversion screen */
+"main_amount_label" = "المبلغ";
+"main_result_label" = "النتيجة";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "إضافة إلى المفضلة";
+"main_favorited" = "في المفضلة";
+"main_a11y_open_settings" = "فتح الإعدادات";
+"main_a11y_swap" = "تبديل العملات";
+"main_a11y_amount" = "المبلغ المراد تحويله";
+"main_a11y_result" = "نتيجة التحويل";
+"main_a11y_add_favorite" = "إضافة هذا الزوج إلى المفضلة";
+"main_a11y_favorited" = "تم حفظ الزوج في المفضلة";
+
+/* Settings */
+"settings_title" = "الإعدادات";
+"settings_section_general" = "عام";
+"settings_section_about" = "حول التطبيق";
+"settings_section_legal" = "قانوني";
+"settings_language" = "اللغة";
+"settings_language_footer" = "ستُطبَّق اللغة الجديدة عند فتح التطبيق في المرة القادمة.";
+
+"language_system" = "النظام";
+"language_spanish" = "الإسبانية";
+"language_english" = "الإنجليزية";
+"language_french" = "الفرنسية";
+"language_italian" = "الإيطالية";
+"language_german" = "الألمانية";
+"language_portuguese" = "البرتغالية";
+"language_arabic" = "العربية";
+"language_chinese_simplified" = "الصينية (المبسطة)";
+"language_hindi" = "الهندية";
+"language_japanese" = "اليابانية";
+"language_korean" = "الكورية";
+"language_vietnamese" = "الفيتنامية";
+
+"settings_share_app" = "مشاركة التطبيق";
+"settings_share_message" = "جرّب Divix — محوّل العملات بحاسبة حقيقية ووضع غير متصل.";
+"settings_visit_website" = "زيارة الموقع";
+"settings_send_suggestion" = "إرسال اقتراح";
+"settings_suggestion_subject" = "Divix — اقتراح";
+"settings_privacy_policy" = "سياسة الخصوصية";
+"settings_terms_of_use" = "شروط الاستخدام";
+"settings_version" = "الإصدار";
+"settings_app_name_label" = "التطبيق";
+"settings_premium_active" = "ميزات Premium مُفعّلة";
+
+/* Common (additional) */
+"common_ok" = "موافق";
+
+/* Premium alerts */
+"premium_unlocked_title" = "تم تفعيل Premium";
+"premium_unlocked_message" = "تمت إزالة الإعلانات، وتم تمكين تعدد العملات بلا حدود والتحديث كل ساعة.";
+"premium_locked_title" = "تم إيقاف Premium";
+"premium_locked_message" = "تمت استعادة الوضع المجاني.";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "نستخدم هذا الإذن لعرض إعلانات أكثر صلة. يمكنك تغييره في أي وقت من الإعدادات.";
+
+/* Onboarding */
+"onboarding_1_title" = "اعرف دائمًا إن كان السعر من اليوم";
+"onboarding_1_subtitle" = "كل تحويل يُظهر بوضوح حداثة البيانات — مباشر أو من الذاكرة المؤقتة أو دون اتصال.";
+"onboarding_2_title" = "حوّل أثناء الحساب";
+"onboarding_2_subtitle" = "حاسبة حقيقية بـ +، −، ×، ÷ مدمجة في الشاشة نفسها. بدون التنقل بين التطبيقات.";
+"onboarding_3_title" = "أزواجك المفضلة على بُعد لمسة";
+"onboarding_3_subtitle" = "احفظ الأزواج وتحقق من أسعارها فورًا.";
+"onboarding_next" = "التالي";
+"onboarding_start" = "ابدأ";
+
+/* Tabs */
+"tab_convert" = "تحويل";
+"tab_multi" = "متعدد";
+"tab_chart" = "رسم بياني";
+"tab_favorites" = "المفضلة";
+
+/* Multi-currency list */
+"multi_title" = "قائمة متعددة العملات";
+"multi_amount_placeholder" = "المبلغ";
+"multi_add_currency" = "إضافة عملة";
+
+/* Historical chart */
+"chart_title" = "السجل";
+"chart_range" = "النطاق";
+"range_7d" = "٧ ي";
+"range_30d" = "٣٠ ي";
+"range_90d" = "٩٠ ي";
+"range_1y" = "١ س";
+"chart_no_data_title" = "لا توجد بيانات لعرضها";
+"chart_no_data_subtitle" = "جرّب نطاقًا أو زوجًا مختلفًا.";
+"chart_load_error" = "تعذّر تحميل البيانات. تحقّق من الاتصال.";
+"chart_current_rate" = "السعر الحالي";
+"chart_variation" = "التغير";
+"chart_x_axis" = "التاريخ";
+"chart_y_axis" = "السعر";
+
+/* Favorites */
+"favorites_title" = "المفضلة";
+"favorites_empty_title" = "لا توجد مفضلات بعد";
+"favorites_empty_subtitle" = "أضف الأزواج من الشاشة الرئيسية باستخدام زر النجمة.";
+
+"range_2y" = "٢ س";
+"range_5y" = "٥ س";
+"badge_updated_at" = "تم التحديث %@";
+"chart_a11y_reverse" = "عكس زوج العملات";
+"multi_empty_title" = "لا توجد عملات بعد";
+"multi_empty_subtitle" = "اسحب للتحديث لتحميل أسعار الصرف.";
+"section_fiat" = "عملات";
+"section_crypto" = "كريبتو";
+"chart_low" = "أدنى";
+"chart_high" = "أعلى";
+"chart_change" = "التغير";
+"filter_all" = "الكل";
+"list_title" = "الأسواق";
+"common_copy" = "نسخ";
+"common_close" = "إغلاق";
+"settings_support" = "الدعم";
+"settings_rate_app" = "قيّم التطبيق";
+"iap_remove_ads" = "إزالة الإعلانات";
+"iap_restore" = "استعادة المشتريات";
+"iap_one_time" = "شراء لمرة واحدة · بدون إعلانات إلى الأبد";
+"iap_product_unavailable" = "المنتج غير متاح. حاول لاحقاً.";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "خيارات الخصوصية";
+"ads_rewarded_watch" = "شاهد فيديو — ساعة بدون إعلانات";
+"ads_rewarded_active_title" = "بدون إعلانات مُفعّل";
+"ads_rewarded_active_ends %@" = "ينتهي %@";
+"ads_rewarded_unavailable_title" = "لا يوجد فيديو متاح";
+"ads_rewarded_unavailable_message" = "حاول مرة أخرى بعد بضع ثوانٍ.";

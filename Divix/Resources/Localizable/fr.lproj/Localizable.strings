@@ -1,0 +1,151 @@
+/* Divix — Français */
+
+"app_name" = "Divix: Currency Exchange";
+
+/* Common */
+"common_cancel" = "Annuler";
+"common_done" = "Terminé";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "Statut du taux de change";
+"badge_no_data" = "Aucune donnée";
+"badge_live" = "En direct";
+"badge_cached_hours" = "Mis à jour il y a %dh";
+"badge_offline_date" = "Hors ligne — données du %@";
+
+/* Currency picker */
+"currency_picker_title" = "Choisir une devise";
+"currency_picker_search_placeholder" = "Rechercher par code ou nom";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "Supprimer le dernier caractère";
+
+/* Main conversion screen */
+"main_amount_label" = "Montant";
+"main_result_label" = "Résultat";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "Ajouter aux favoris";
+"main_favorited" = "Dans les favoris";
+"main_a11y_open_settings" = "Ouvrir les réglages";
+"main_a11y_swap" = "Inverser les devises";
+"main_a11y_amount" = "Montant à convertir";
+"main_a11y_result" = "Résultat de la conversion";
+"main_a11y_add_favorite" = "Ajouter cette paire aux favoris";
+"main_a11y_favorited" = "Paire enregistrée dans les favoris";
+
+/* Settings */
+"settings_title" = "Réglages";
+"settings_section_general" = "Général";
+"settings_section_about" = "À propos";
+"settings_section_legal" = "Mentions légales";
+"settings_language" = "Langue";
+"settings_language_footer" = "La nouvelle langue prendra effet au prochain lancement de l'app.";
+
+"language_system" = "Système";
+"language_spanish" = "Espagnol";
+"language_english" = "Anglais";
+"language_french" = "Français";
+"language_italian" = "Italien";
+"language_german" = "Allemand";
+"language_portuguese" = "Portugais";
+"language_arabic" = "Arabe";
+"language_chinese_simplified" = "Chinois (simplifié)";
+"language_hindi" = "Hindi";
+"language_japanese" = "Japonais";
+"language_korean" = "Coréen";
+"language_vietnamese" = "Vietnamien";
+
+"settings_share_app" = "Partager l'app";
+"settings_share_message" = "Découvre Divix — le convertisseur de devises avec une vraie calculatrice et un mode hors ligne.";
+"settings_visit_website" = "Visiter le site";
+"settings_send_suggestion" = "Envoyer une suggestion";
+"settings_suggestion_subject" = "Divix — Suggestion";
+"settings_privacy_policy" = "Politique de confidentialité";
+"settings_terms_of_use" = "Conditions d'utilisation";
+"settings_version" = "Version";
+"settings_app_name_label" = "App";
+"settings_premium_active" = "Fonctions premium actives";
+
+/* Common (additional) */
+"common_ok" = "OK";
+
+/* Premium alerts */
+"premium_unlocked_title" = "Premium activé";
+"premium_unlocked_message" = "Publicités supprimées, multi-devises illimité et actualisation horaire activés.";
+"premium_locked_title" = "Premium désactivé";
+"premium_locked_message" = "Mode gratuit restauré.";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "Nous utilisons cette autorisation pour vous proposer des annonces plus pertinentes. Vous pouvez la modifier à tout moment dans les Réglages.";
+
+/* Onboarding */
+"onboarding_1_title" = "Sachez toujours si le taux date d'aujourd'hui";
+"onboarding_1_subtitle" = "Chaque conversion indique clairement la fraîcheur des données — en direct, en cache ou hors ligne.";
+"onboarding_2_title" = "Convertis pendant que tu calcules";
+"onboarding_2_subtitle" = "Une vraie calculatrice avec +, −, ×, ÷ intégrée à la même écran. Sans changer d'app.";
+"onboarding_3_title" = "Vos paires favorites en un tap";
+"onboarding_3_subtitle" = "Enregistrez des combinaisons et consultez leur taux instantanément.";
+"onboarding_next" = "Suivant";
+"onboarding_start" = "Commencer";
+
+/* Tabs */
+"tab_convert" = "Convertir";
+"tab_multi" = "Multi";
+"tab_chart" = "Graphique";
+"tab_favorites" = "Favoris";
+
+/* Multi-currency list */
+"multi_title" = "Liste multi-devises";
+"multi_amount_placeholder" = "Montant";
+"multi_add_currency" = "Ajouter une devise";
+
+/* Historical chart */
+"chart_title" = "Historique";
+"chart_range" = "Plage";
+"range_7d" = "7J";
+"range_30d" = "30J";
+"range_90d" = "90J";
+"range_1y" = "1A";
+"chart_no_data_title" = "Aucune donnée à afficher";
+"chart_no_data_subtitle" = "Essayez une autre plage ou paire.";
+"chart_load_error" = "Impossible de charger les données. Vérifiez votre connexion.";
+"chart_current_rate" = "Taux actuel";
+"chart_variation" = "Variation";
+"chart_x_axis" = "Date";
+"chart_y_axis" = "Taux";
+
+/* Favorites */
+"favorites_title" = "Favoris";
+"favorites_empty_title" = "Aucun favori";
+"favorites_empty_subtitle" = "Ajoutez des paires depuis l'écran principal avec le bouton étoile.";
+
+"range_2y" = "2A";
+"range_5y" = "5A";
+"badge_updated_at" = "Mis à jour %@";
+"chart_a11y_reverse" = "Inverser la paire de devises";
+"multi_empty_title" = "Aucune devise pour l'instant";
+"multi_empty_subtitle" = "Tirez pour actualiser et charger les taux de change.";
+"section_fiat" = "Devises";
+"section_crypto" = "Crypto";
+"chart_low" = "Bas";
+"chart_high" = "Haut";
+"chart_change" = "Variation";
+"filter_all" = "Toutes";
+"list_title" = "Marchés";
+"common_copy" = "Copier";
+"common_close" = "Fermer";
+"settings_support" = "Assistance";
+"settings_rate_app" = "Noter l'app";
+"iap_remove_ads" = "Supprimer les publicités";
+"iap_restore" = "Restaurer les achats";
+"iap_one_time" = "Achat unique · sans publicité pour toujours";
+"iap_product_unavailable" = "Produit indisponible. Réessayez plus tard.";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "Options de confidentialité";
+"ads_rewarded_watch" = "Voir une vidéo — 1 heure sans pub";
+"ads_rewarded_active_title" = "Sans publicité activé";
+"ads_rewarded_active_ends %@" = "Se termine %@";
+"ads_rewarded_unavailable_title" = "Aucune vidéo disponible";
+"ads_rewarded_unavailable_message" = "Réessayez dans quelques secondes.";

@@ -1,0 +1,151 @@
+/* Divix — 简体中文 */
+
+"app_name" = "Divix: Currency Exchange";
+
+/* Common */
+"common_cancel" = "取消";
+"common_done" = "完成";
+
+/* Rate status badge */
+"badge_accessibility_prefix" = "汇率状态";
+"badge_no_data" = "暂无数据";
+"badge_live" = "实时";
+"badge_cached_hours" = "%d 小时前更新";
+"badge_offline_date" = "离线 — 数据来自 %@";
+
+/* Currency picker */
+"currency_picker_title" = "选择货币";
+"currency_picker_search_placeholder" = "按代码或名称搜索";
+
+/* Calculator accessibility */
+"calc_a11y_backspace" = "删除最后一个字符";
+
+/* Main conversion screen */
+"main_amount_label" = "金额";
+"main_result_label" = "结果";
+"main_result_placeholder" = "—";
+"main_rate_line" = "1 %@ = %@ %@";
+"main_add_favorite" = "添加到收藏";
+"main_favorited" = "已收藏";
+"main_a11y_open_settings" = "打开设置";
+"main_a11y_swap" = "交换货币";
+"main_a11y_amount" = "要转换的金额";
+"main_a11y_result" = "转换结果";
+"main_a11y_add_favorite" = "将此货币对加入收藏";
+"main_a11y_favorited" = "货币对已保存到收藏";
+
+/* Settings */
+"settings_title" = "设置";
+"settings_section_general" = "通用";
+"settings_section_about" = "关于";
+"settings_section_legal" = "法律";
+"settings_language" = "语言";
+"settings_language_footer" = "新语言将在下次打开应用时生效。";
+
+"language_system" = "系统";
+"language_spanish" = "西班牙语";
+"language_english" = "英语";
+"language_french" = "法语";
+"language_italian" = "意大利语";
+"language_german" = "德语";
+"language_portuguese" = "葡萄牙语";
+"language_arabic" = "阿拉伯语";
+"language_chinese_simplified" = "中文（简体）";
+"language_hindi" = "印地语";
+"language_japanese" = "日语";
+"language_korean" = "韩语";
+"language_vietnamese" = "越南语";
+
+"settings_share_app" = "分享应用";
+"settings_share_message" = "试试 Divix — 带真实计算器和离线模式的汇率换算应用。";
+"settings_visit_website" = "访问官网";
+"settings_send_suggestion" = "发送建议";
+"settings_suggestion_subject" = "Divix — 建议";
+"settings_privacy_policy" = "隐私政策";
+"settings_terms_of_use" = "使用条款";
+"settings_version" = "版本";
+"settings_app_name_label" = "应用";
+"settings_premium_active" = "高级功能已激活";
+
+/* Common (additional) */
+"common_ok" = "好的";
+
+/* Premium alerts */
+"premium_unlocked_title" = "高级版已解锁";
+"premium_unlocked_message" = "已移除广告，启用无限多币种和每小时刷新。";
+"premium_locked_title" = "高级版已关闭";
+"premium_locked_message" = "已恢复免费模式。";
+
+/* App Tracking Transparency description (also used in Info.plist) */
+"NSUserTrackingUsageDescription" = "我们使用此权限向您展示更相关的广告。您可以随时在“设置”中更改。";
+
+/* Onboarding */
+"onboarding_1_title" = "随时知道汇率是否为今日";
+"onboarding_1_subtitle" = "每次换算都清晰显示数据新鲜度——实时、缓存或离线。";
+"onboarding_2_title" = "边算边换";
+"onboarding_2_subtitle" = "同一屏内集成真实计算器，支持 +、−、×、÷。无需切换应用。";
+"onboarding_3_title" = "常用币种对，一触即达";
+"onboarding_3_subtitle" = "保存组合，随时查看汇率。";
+"onboarding_next" = "下一步";
+"onboarding_start" = "开始使用";
+
+/* Tabs */
+"tab_convert" = "换算";
+"tab_multi" = "多币种";
+"tab_chart" = "图表";
+"tab_favorites" = "收藏";
+
+/* Multi-currency list */
+"multi_title" = "多币种列表";
+"multi_amount_placeholder" = "金额";
+"multi_add_currency" = "添加货币";
+
+/* Historical chart */
+"chart_title" = "历史";
+"chart_range" = "范围";
+"range_7d" = "7日";
+"range_30d" = "30日";
+"range_90d" = "90日";
+"range_1y" = "1年";
+"chart_no_data_title" = "暂无数据";
+"chart_no_data_subtitle" = "请尝试其他范围或币种对。";
+"chart_load_error" = "无法加载数据，请检查网络连接。";
+"chart_current_rate" = "当前汇率";
+"chart_variation" = "变化";
+"chart_x_axis" = "日期";
+"chart_y_axis" = "汇率";
+
+/* Favorites */
+"favorites_title" = "收藏";
+"favorites_empty_title" = "暂无收藏";
+"favorites_empty_subtitle" = "在主屏幕用星形按钮添加币种对。";
+
+"range_2y" = "2年";
+"range_5y" = "5年";
+"badge_updated_at" = "更新于 %@";
+"chart_a11y_reverse" = "反转货币对";
+"multi_empty_title" = "暂无货币";
+"multi_empty_subtitle" = "下拉刷新以加载汇率。";
+"section_fiat" = "法定货币";
+"section_crypto" = "加密货币";
+"chart_low" = "最低";
+"chart_high" = "最高";
+"chart_change" = "变化";
+"filter_all" = "全部";
+"list_title" = "市场";
+"common_copy" = "复制";
+"common_close" = "关闭";
+"settings_support" = "支持";
+"settings_rate_app" = "为应用评分";
+"iap_remove_ads" = "去除广告";
+"iap_restore" = "恢复购买";
+"iap_one_time" = "一次性购买 · 永久去除广告";
+"iap_product_unavailable" = "产品不可用，请稍后再试。";
+
+/* MARK: - Ads (consent + rewarded ad-free window) */
+"settings_privacy_options" = "隐私选项";
+"ads_rewarded_watch" = "观看视频 — 1 小时无广告";
+"ads_rewarded_active_title" = "无广告已启用";
+"ads_rewarded_active_ends %@" = "%@结束";
+"ads_rewarded_unavailable_title" = "暂无可用视频";
+"ads_rewarded_unavailable_message" = "请几秒后重试。";
