@@ -2,7 +2,7 @@
 export const asset = (p) => import.meta.env.BASE_URL + p.replace(/^\//, '')
 
 export const FLAG = {
-  USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', MXN: 'mx', CAD: 'ca', CHF: 'ch', AUD: 'au', CNY: 'cn', TRY: 'tr', BRL: 'br', INR: 'in',
+  USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', MXN: 'mx', CAD: 'ca', CHF: 'ch', AUD: 'au', CNY: 'cn', TRY: 'tr', BRL: 'br', INR: 'in', KRW: 'kr',
 }
 
 /** 5 significant digits keeps 0.88865, 18.384 and 158.02 readable in any locale. */
@@ -11,7 +11,7 @@ export function fmtRate(value, locale) {
 }
 
 export function fmtMoney(value, locale, code) {
-  const digits = code === 'JPY' ? 0 : 2
+  const digits = code === 'JPY' || code === 'KRW' ? 0 : 2
   return new Intl.NumberFormat(locale, { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(value)
 }
 

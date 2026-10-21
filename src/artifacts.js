@@ -1,10 +1,8 @@
 // Everything crawlers and language models read that is not a rendered page: sitemap, robots, llms.txt, markdown twins.
 import { APP_ID, APP_URL, CONTACT_EMAIL, COUNTS, PUBLISHER, SITE_BASE, SITE_MODIFIED, SITE_ORIGIN } from './config'
-import en from './content/en'
-import es from './content/es'
-import { LANGS, ROUTES, url } from './routes'
+import { CONTENT as C } from './i18n'
+import { hreflang, LANG_LABEL, LANGS, ROUTES, url } from './routes'
 
-const C = { en, es }
 const root = `${SITE_ORIGIN}${SITE_BASE}`
 
 export function sitemapXml() {
@@ -13,10 +11,10 @@ export function sitemapXml() {
       .map(([l, u]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${u}" />`)
       .join('\n')}\n  </url>`
   const rows = [
-    entry(root, [['x-default', root], ['en', url('home', 'en')], ['es', url('home', 'es')]], '0.5'),
+    entry(root, [['x-default', root], ...LANGS.map((l) => [hreflang(l), url('home', l)])], '0.5'),
   ]
   for (const r of ROUTES) {
-    const alts = [...LANGS.map((l) => [l, url(r.id, l)]), ['x-default', url(r.id, 'en')]]
+    const alts = [...LANGS.map((l) => [hreflang(l), url(r.id, l)]), ['x-default', url(r.id, 'en')]]
     const prio = r.id === 'home' ? '1.0' : r.id.startsWith('guide') ? '0.8' : r.id === 'support' ? '0.6' : '0.3'
     for (const l of LANGS) rows.push(entry(url(r.id, l), alts, prio))
   }
@@ -104,7 +102,7 @@ export function markdownFor(routeId, lang) {
 export const hasMarkdown = (id) => id !== 'root'
 
 export function llmsTxt() {
-  const e = en
+  const e = C.en
   const lines = [
     '# Divix',
     '',
@@ -117,27 +115,24 @@ export function llmsTxt() {
       `Price: free with ads. A one-time in-app purchase removes ads; a rewarded video gives one hour without ads. No subscription.`,
       `Currencies: ${COUNTS.fiat} fiat and ${COUNTS.crypto} crypto (BTC, ETH, USDT, BNB, SOL, XRP, USDC, ADA, DOGE, TRX, TON, AVAX, DOT, LINK, MATIC, LTC, OP, ARB, SHIB, XLM).`,
       'Rates: mid-market rates from public providers such as Frankfurter, crypto prices from CoinGecko. Each rate is labelled live (under 4 hours), cached or offline.',
-      'Languages of the app: English, Spanish, German, French, Italian, Portuguese, Arabic, Hindi, Simplified Chinese.',
+      `Languages of the app and of this site: ${LANGS.map((l) => LANG_LABEL[l]).join(', ')}.`,
       `Download: ${APP_URL} (App Store id${APP_ID})`,
       `Contact: ${CONTACT_EMAIL}`,
     ]),
     '',
-    '## English',
-    '',
-    `- [Divix home](${url('home', 'en')}): what the app does, live rates, FAQ (Markdown: ${mdUrl('home', 'en')})`,
-    ...e.guides.ids.map((id) => `- [${e.guide[id].h1}](${url(id, 'en')}): ${e.guide[id].summary} (Markdown: ${mdUrl(id, 'en')})`),
-    `- [Support](${url('support', 'en')}): common questions and contact`,
-    `- [Privacy Policy](${url('privacy', 'en')})`,
-    `- [Terms of Use](${url('terms', 'en')})`,
-    '',
-    '## Español',
-    '',
-    `- [Inicio de Divix](${url('home', 'es')}): qué hace la app, tipos en vivo, preguntas frecuentes (Markdown: ${mdUrl('home', 'es')})`,
-    ...es.guides.ids.map((id) => `- [${es.guide[id].h1}](${url(id, 'es')}): ${es.guide[id].summary} (Markdown: ${mdUrl(id, 'es')})`),
-    `- [Soporte](${url('support', 'es')})`,
-    `- [Política de privacidad](${url('privacy', 'es')})`,
-    `- [Términos de uso](${url('terms', 'es')})`,
-    '',
+    ...LANGS.flatMap((l) => {
+      const t = C[l]
+      return [
+        `## ${LANG_LABEL[l]}`,
+        '',
+        `- [${t.ui.footer.links.home}](${url('home', l)}) (Markdown: ${mdUrl('home', l)})`,
+        ...t.guides.ids.map((id) => `- [${t.guide[id].h1}](${url(id, l)}): ${t.guide[id].summary} (Markdown: ${mdUrl(id, l)})`),
+        `- [${t.ui.footer.links.support}](${url('support', l)})`,
+        `- [${t.ui.footer.links.privacy}](${url('privacy', l)})`,
+        `- [${t.ui.footer.links.terms}](${url('terms', l)})`,
+        '',
+      ]
+    }),
     '## Optional',
     '',
     `- [Full text of the site for assistants](${root}llms-full.txt)`,
@@ -150,7 +145,7 @@ export function llmsTxt() {
 export function llmsFull() {
   const parts = ['# Divix, full text', '', `Source: ${root}`, '']
   for (const lang of LANGS) {
-    parts.push(lang === 'en' ? '# English' : '# Español', '')
+    parts.push(`# ${LANG_LABEL[lang]}`, '')
     for (const id of ['home', ...C[lang].guides.ids, 'support']) {
       parts.push(`<!-- ${url(id, lang)} -->`, markdownFor(id, lang).replace(/^# /gm, '## ').replace(/^## (?=.*)/gm, '## '))
     }

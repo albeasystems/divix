@@ -14,8 +14,7 @@ export default {
     nav: { guides: 'Guías', faq: 'Preguntas', support: 'Soporte' },
     sign: 'Cambio de divisas',
     menu: 'Menú',
-    langName: 'English',
-    langLabel: 'Read in English',
+    langMenu: 'Idioma',
     footer: {
       product: 'Divix',
       learn: 'Aprende',
@@ -36,6 +35,7 @@ export default {
   },
 
   seo: {
+    imgAlt: 'Divix: conversor de divisas con calculadora para iPhone',
     home: {
       title: 'Divix: Conversor de divisas y calculadora para iPhone',
       description:
@@ -113,7 +113,7 @@ export default {
         { h: 'Funciona sin conexión', p: 'Los últimos tipos se guardan en tu móvil, así que una señal débil no te frena.' },
         { h: 'Sin cuenta', p: 'Abre la app y escribe. Sin email ni contraseña.' },
         { h: 'Sin margen', p: 'Tipos de mercado, el mismo número que encontrarías buscando en internet.' },
-        { h: 'Nueve idiomas', p: 'Inglés, español, alemán, francés, italiano, portugués, árabe, hindi y chino.' },
+        { h: 'Doce idiomas', p: 'Inglés, español, francés, italiano, alemán, portugués, árabe, chino, hindi, japonés, coreano y vietnamita.' },
       ],
     },
     pricing: {
