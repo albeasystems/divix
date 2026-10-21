@@ -25,7 +25,9 @@ const preload = ['doto-latin-full-normal', 'hanken-grotesk-latin-wght-normal']
   .map((f) => `<link rel="preload" as="font" type="font/woff2" href="${base}assets/${f}" crossorigin />`)
   .join('\n    ')
 
-const boardData = { en: await boards.en(), es: await boards.es() }
+const boardData = Object.fromEntries(await Promise.all(routes.langs.map(async (l) => [l, await boards[l]()])))
+const htmlLang = (l) => (l === 'zh' ? 'zh-Hans' : l)
+const dirOf = (l) => (l === 'ar' ? 'rtl' : 'ltr')
 
 async function write(rel, body) {
   const file = join(dist, rel)
@@ -39,7 +41,7 @@ function page({ routeId, lang, withBoard, extraHead = '' }) {
   const hero = routeId === 'home' ? `<link rel="preload" as="image" href="${base}divix-happy-journey.webp" type="image/webp" fetchpriority="high" />` : ''
   const data = withBoard ? `<script id="board-data" type="application/json">${JSON.stringify(boardData[lang]).replace(/</g, '\\u003c')}</script>` : ''
   return template
-    .replace('<html lang="en">', `<html lang="${lang}">`)
+    .replace('<html lang="en">', `<html lang="${htmlLang(lang)}" dir="${dirOf(lang)}">`)
     .replace('<!--ssr-head-->', `${head}\n    ${mdLink}\n    ${preload}\n    ${hero}\n    ${extraHead}`)
     .replace('<div id="root"><!--ssr-body--></div>', `<div id="root" data-route="${routeId}" data-lang="${lang}">${html}</div>`)
     .replace('<!--ssr-data-->', data)
@@ -47,7 +49,7 @@ function page({ routeId, lang, withBoard, extraHead = '' }) {
 
 let count = 0
 // Language-aware root: static language chooser plus a one-line redirect by browser language.
-const rootRedirect = `<script>(function(){try{var l=(navigator.language||'en').slice(0,2)==='es'?'es':'en';if(!location.hash&&!/[?&]stay/.test(location.search))location.replace('${base}'+l+'/')}catch(e){}})()</script>`
+const rootRedirect = `<script>(function(){try{var n=(navigator.language||'en').toLowerCase(),l=n.slice(0,2),ok=${JSON.stringify(routes.langs)};if(l==='zh'||n.indexOf('zh')===0)l='zh';if(ok.indexOf(l)<0)l='en';if(!location.hash&&!/[?&]stay/.test(location.search))location.replace('${base}'+l+'/')}catch(e){}})()</script>`
 await write('index.html', page({ routeId: 'root', lang: 'en', extraHead: rootRedirect })); count++
 
 for (const r of routes.list) {
@@ -73,4 +75,4 @@ await write('site.webmanifest', artifacts.manifestJson())
 await write('.nojekyll', '')
 
 await rm(ssrOut, { recursive: true, force: true })
-console.log(`prerendered ${count} pages, live rates: en=${boardData.en.live} es=${boardData.es.live}`)
+console.log(`prerendered ${count} pages, live rates: ${routes.langs.map((l) => `${l}=${boardData[l].live}`).join(' ')}`)

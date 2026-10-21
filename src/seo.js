@@ -1,11 +1,12 @@
 import { APP_ID, APP_NAME, APP_URL, CONTACT_EMAIL, COUNTS, PUBLISHER, SITE_BASE, SITE_MODIFIED, SITE_ORIGIN, SITE_PUBLISHED } from './config'
 import { CONTENT } from './i18n'
-import { byId, LANGS, url } from './routes'
+import { byId, hreflang, LANGS, url } from './routes'
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 const abs = (p) => SITE_ORIGIN + SITE_BASE + p
 
-export const OG_IMAGE = (lang) => abs(`og/og-${lang}.png`)
+// Only English and Spanish have a dedicated social image; the other languages share the English one.
+export const OG_IMAGE = (lang) => abs(`og/og-${lang === 'es' ? 'es' : 'en'}.png`)
 
 /** Title, description and page type for a route. */
 export function pageMeta(routeId, lang) {
@@ -19,13 +20,9 @@ export function pageMeta(routeId, lang) {
 
 function alternates(routeId, lang) {
   if (routeId === 'root') {
-    return [
-      ['x-default', url('root', 'en')],
-      ['en', url('home', 'en')],
-      ['es', url('home', 'es')],
-    ]
+    return [['x-default', url('root', 'en')], ...LANGS.map((l) => [hreflang(l), url('home', l)])]
   }
-  const out = LANGS.map((l) => [l, url(routeId, l)])
+  const out = LANGS.map((l) => [hreflang(l), url(routeId, l)])
   out.push(['x-default', url(routeId, 'en')])
   return out
 }
@@ -56,7 +53,7 @@ function appNode(lang) {
     installUrl: APP_URL,
     image: abs('icon-512.png'),
     screenshot: ['convert', 'markets', 'chart'].map((n) => abs(`shots/${n}.webp`)),
-    inLanguage: ['en', 'es', 'de', 'fr', 'it', 'pt', 'ar', 'hi', 'zh-Hans'],
+    inLanguage: LANGS.map(hreflang),
     featureList: [
       `${COUNTS.fiat} fiat currencies and ${COUNTS.crypto} cryptocurrencies`,
       'Calculator built into the conversion screen',
@@ -89,15 +86,15 @@ export function jsonLd(routeId, lang) {
   const meta = pageMeta(routeId, lang)
   const graph = []
   const siteId = `${SITE_ORIGIN}${SITE_BASE}#website`
-  graph.push({ '@type': 'WebSite', '@id': siteId, url: `${SITE_ORIGIN}${SITE_BASE}`, name: APP_NAME, inLanguage: ['en', 'es'], publisher: { '@id': publisher['@id'] } })
+  graph.push({ '@type': 'WebSite', '@id': siteId, url: `${SITE_ORIGIN}${SITE_BASE}`, name: APP_NAME, inLanguage: LANGS.map(hreflang), publisher: { '@id': publisher['@id'] } })
   graph.push(publisher)
 
   if (routeId === 'home') {
-    graph.push({ '@type': 'WebPage', '@id': url('home', lang) + '#webpage', url: url('home', lang), name: meta.title, description: meta.description, inLanguage: lang, isPartOf: { '@id': siteId }, about: { '@id': `${SITE_ORIGIN}${SITE_BASE}#app` }, primaryImageOfPage: OG_IMAGE(lang), dateModified: SITE_MODIFIED })
+    graph.push({ '@type': 'WebPage', '@id': url('home', lang) + '#webpage', url: url('home', lang), name: meta.title, description: meta.description, inLanguage: hreflang(lang), isPartOf: { '@id': siteId }, about: { '@id': `${SITE_ORIGIN}${SITE_BASE}#app` }, primaryImageOfPage: OG_IMAGE(lang), dateModified: SITE_MODIFIED })
     graph.push(appNode(lang))
     graph.push(faqNode(t.home.faq.items))
   } else if (routeId === 'guides') {
-    graph.push({ '@type': 'CollectionPage', url: url('guides', lang), name: t.guides.h1, description: meta.description, inLanguage: lang, isPartOf: { '@id': siteId } })
+    graph.push({ '@type': 'CollectionPage', url: url('guides', lang), name: t.guides.h1, description: meta.description, inLanguage: hreflang(lang), isPartOf: { '@id': siteId } })
     graph.push(crumbs([[t.ui.breadcrumbs.home, url('home', lang)], [t.ui.breadcrumbs.guides, url('guides', lang)]]))
   } else if (t.guide[routeId]) {
     const g = t.guide[routeId]
@@ -105,7 +102,7 @@ export function jsonLd(routeId, lang) {
       '@type': 'Article',
       headline: g.title,
       description: g.description,
-      inLanguage: lang,
+      inLanguage: hreflang(lang),
       datePublished: SITE_PUBLISHED,
       dateModified: SITE_MODIFIED,
       image: OG_IMAGE(lang),
@@ -117,11 +114,11 @@ export function jsonLd(routeId, lang) {
     graph.push(faqNode(g.faq))
     graph.push(crumbs([[t.ui.breadcrumbs.home, url('home', lang)], [t.ui.breadcrumbs.guides, url('guides', lang)], [g.h1, url(routeId, lang)]]))
   } else if (routeId === 'support') {
-    graph.push({ '@type': 'ContactPage', url: url('support', lang), name: t.legal.support.h1, inLanguage: lang, isPartOf: { '@id': siteId } })
+    graph.push({ '@type': 'ContactPage', url: url('support', lang), name: t.legal.support.h1, inLanguage: hreflang(lang), isPartOf: { '@id': siteId } })
     graph.push(faqNode(t.legal.support.items))
     graph.push(crumbs([[t.ui.breadcrumbs.home, url('home', lang)], [t.legal.support.h1, url('support', lang)]]))
   } else if (routeId === 'privacy' || routeId === 'terms') {
-    graph.push({ '@type': 'WebPage', url: url(routeId, lang), name: t.legal[routeId].h1, inLanguage: lang, isPartOf: { '@id': siteId } })
+    graph.push({ '@type': 'WebPage', url: url(routeId, lang), name: t.legal[routeId].h1, inLanguage: hreflang(lang), isPartOf: { '@id': siteId } })
     graph.push(crumbs([[t.ui.breadcrumbs.home, url('home', lang)], [t.legal[routeId].h1, url(routeId, lang)]]))
   }
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
@@ -131,11 +128,10 @@ export function jsonLd(routeId, lang) {
 export function headHtml(routeId, lang) {
   const meta = pageMeta(routeId, lang)
   const canonical = routeId === 'root' ? url('root', 'en') : url(routeId, lang)
-  const other = lang === 'en' ? 'es' : 'en'
   const alts = alternates(routeId, lang)
   const t = CONTENT[lang]
   const img = OG_IMAGE(routeId === 'root' ? 'en' : lang)
-  const imgAlt = lang === 'es' ? 'Divix: conversor de divisas con calculadora para iPhone' : 'Divix: currency converter with a built-in calculator for iPhone'
+  const imgAlt = t.seo.imgAlt
   const tags = [
     `<title>${esc(meta.title)}</title>`,
     `<meta name="description" content="${esc(meta.description)}" />`,
@@ -148,7 +144,7 @@ export function headHtml(routeId, lang) {
     `<meta property="og:description" content="${esc(meta.description)}" />`,
     `<meta property="og:url" content="${canonical}" />`,
     `<meta property="og:locale" content="${t.ogLocale}" />`,
-    routeId !== 'root' ? `<meta property="og:locale:alternate" content="${CONTENT[other].ogLocale}" />` : '',
+    ...(routeId !== 'root' ? LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternate" content="${CONTENT[l].ogLocale}" />`) : []),
     `<meta property="og:image" content="${img}" />`,
     `<meta property="og:image:width" content="1200" />`,
     `<meta property="og:image:height" content="630" />`,

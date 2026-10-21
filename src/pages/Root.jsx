@@ -1,4 +1,4 @@
-import { href } from '../routes'
+import { href, hreflang, LANGS, LANG_LABEL } from '../routes'
 import { asset } from '../lib'
 
 /** Language chooser at the site root. A tiny script in index.html redirects by browser language. */
@@ -10,8 +10,9 @@ export default function Root() {
         <h1 className="led-h1">Divix</h1>
         <p className="hero-sub">Currency converter and calculator for iPhone. Conversor de divisas y calculadora para iPhone.</p>
         <p className="root-links">
-          <a className="btn btn-lg" href={href('home', 'en')} hrefLang="en" lang="en">English</a>
-          <a className="btn btn-lg" href={href('home', 'es')} hrefLang="es" lang="es">Español</a>
+          {LANGS.map((l) => (
+            <a key={l} className="btn btn-lg" href={href('home', l)} hrefLang={hreflang(l)} lang={hreflang(l)}>{LANG_LABEL[l]}</a>
+          ))}
         </p>
       </div>
     </main>

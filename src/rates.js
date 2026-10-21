@@ -2,9 +2,20 @@
 // Works in the browser and in Node (build time), so the prerendered HTML already carries real numbers.
 const API = 'https://api.frankfurter.dev/v1'
 
+// The board starts from the currency most readers of each language hold.
 export const BOARD = {
   en: { base: 'USD', symbols: ['EUR', 'GBP', 'JPY', 'MXN', 'CAD', 'CHF'] },
   es: { base: 'EUR', symbols: ['USD', 'GBP', 'JPY', 'MXN', 'CHF', 'CAD'] },
+  fr: { base: 'EUR', symbols: ['USD', 'GBP', 'CHF', 'CAD', 'JPY', 'CNY'] },
+  it: { base: 'EUR', symbols: ['USD', 'GBP', 'CHF', 'JPY', 'CAD', 'AUD'] },
+  de: { base: 'EUR', symbols: ['USD', 'GBP', 'CHF', 'JPY', 'TRY', 'CAD'] },
+  pt: { base: 'BRL', symbols: ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'CHF'] },
+  ar: { base: 'USD', symbols: ['EUR', 'GBP', 'TRY', 'JPY', 'CHF', 'INR'] },
+  zh: { base: 'CNY', symbols: ['USD', 'EUR', 'JPY', 'GBP', 'KRW', 'AUD'] },
+  hi: { base: 'INR', symbols: ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD'] },
+  ja: { base: 'JPY', symbols: ['USD', 'EUR', 'GBP', 'CNY', 'KRW', 'AUD'] },
+  ko: { base: 'KRW', symbols: ['USD', 'EUR', 'JPY', 'CNY', 'GBP', 'AUD'] },
+  vi: { base: 'USD', symbols: ['EUR', 'JPY', 'KRW', 'CNY', 'GBP', 'AUD'] },
 }
 
 // Last known values (16 Oct 2026), only used when the network call fails. No change figure is shown for them.
@@ -39,12 +50,15 @@ export async function fetchBoard(base, symbols) {
       })),
     }
   } catch {
-    const f = FALLBACK[base]
+    // Saved values exist only for USD and EUR. Any other base falls back to the USD board (the page labels it as saved rates).
+    const useBase = FALLBACK[base] ? base : 'USD'
+    const f = FALLBACK[useBase]
+    const rows = (FALLBACK[base] ? symbols : BOARD.en.symbols).filter((code) => f.rates[code] != null)
     return {
-      base,
+      base: useBase,
       date: f.date,
       live: false,
-      rows: symbols.map((code) => ({ code, rate: f.rates[code], change: null })),
+      rows: rows.map((code) => ({ code, rate: f.rates[code], change: null })),
     }
   }
 }

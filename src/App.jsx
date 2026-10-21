@@ -1,4 +1,4 @@
-import { PageProvider } from './i18n'
+import { CONTENT, PageProvider } from './i18n'
 import { Footer, Nav } from './components/shared'
 import Home from './pages/Home'
 import Root from './pages/Root'
@@ -21,7 +21,7 @@ export default function App({ routeId, lang, board }) {
   const Page = PAGES[routeId] || Root
   return (
     <PageProvider lang={lang} routeId={routeId} board={board}>
-      <a href="#main" className="skip">{lang === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a>
+      <a href="#main" className="skip">{CONTENT[lang].ui.skip}</a>
       <Nav />
       <Page />
       <Footer />
