@@ -8,8 +8,11 @@ import { href } from '../routes'
 import { asset } from '../lib'
 
 function Hero() {
-  const { t, board } = usePage()
+  const { t, board, lang } = usePage()
   const h = t.home.hero
+  // English keeps the original recording; every other language has its own journey built from its own captures.
+  const dir = lang === 'en' ? '' : `shots/${lang}/`
+  const journey = lang === 'en' ? 'divix-happy-journey.webp' : `${dir}journey.webp`
   return (
     <section className="board hero">
       <div className="wrap hero-copy">
@@ -25,9 +28,9 @@ function Hero() {
         <RateBoard board={board} />
         <figure className="phone phone-hero">
           <picture>
-            <source media="(prefers-reduced-motion: reduce)" srcSet={asset('shots/convert.webp')} type="image/webp" />
-            <source srcSet={asset('divix-happy-journey.webp')} type="image/webp" />
-            <img src={asset('divix-happy-journey.gif')} width="360" height="783" alt={h.phoneAlt} fetchPriority="high" decoding="async" />
+            <source media="(prefers-reduced-motion: reduce)" srcSet={asset(`${lang === 'en' ? 'shots/' : dir}convert.webp`)} type="image/webp" />
+            <source srcSet={asset(journey)} type="image/webp" />
+            <img src={asset(lang === 'en' ? 'divix-happy-journey.gif' : journey)} width="360" height="783" alt={h.phoneAlt} fetchPriority="high" decoding="async" />
           </picture>
         </figure>
       </div>
